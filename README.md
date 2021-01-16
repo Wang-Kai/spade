@@ -1,4 +1,4 @@
-# spade - CLI tool for [`Go template`]()
+# spade - CLI tool for Go template
 
 Command line tool that render go template with values from YAML files.
 
