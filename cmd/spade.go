@@ -5,6 +5,7 @@ import (
 	"os"
 	"text/template"
 
+	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )
 
@@ -12,12 +13,12 @@ import (
 func parseVal() (map[string]interface{}, error) {
 	vFile, err := ioutil.ReadFile(valFile)
 	if err != nil {
-		return nil, err
+		return nil, errors.Wrapf(err, "read value file %s error", valFile)
 	}
 
 	var val = make(map[string]interface{})
 	if err := yaml.Unmarshal(vFile, val); err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "unmarshal YAML error")
 	}
 
 	return val, nil
