@@ -1,0 +1,1 @@
+Hi, my name {{ .name }}, i am {{ .age }} years ago.
