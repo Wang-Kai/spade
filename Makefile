@@ -1,2 +1,4 @@
-run:
-	go run main.go -t example/template -v example/values.yaml
+.PHONY: test
+
+test:
+	go test -v ./...
