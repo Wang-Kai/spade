@@ -14,9 +14,9 @@ var (
 
 func init() {
 	rootCmd.PersistentFlags().StringVarP(&tplFile, "template-file", "t", "", "template file")
-	rootCmd.MarkFlagRequired("template-file")
+	rootCmd.MarkPersistentFlagRequired("template-file")
 	rootCmd.PersistentFlags().StringVarP(&valFile, "value-file", "v", "", "value file")
-	rootCmd.MarkFlagRequired("value-file")
+	rootCmd.MarkPersistentFlagRequired("value-file")
 }
 
 var rootCmd = &cobra.Command{
