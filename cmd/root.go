@@ -20,8 +20,9 @@ func init() {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "spade",
-	Short: "Spade implements data-driven templates for generating textual output.",
+	Use:     "spade",
+	Short:   "Spade implements data-driven templates for generating textual output.",
+	Version: "v0.1.0",
 	Run: func(cmd *cobra.Command, args []string) {
 		val, err := parseVal()
 		if err != nil {
